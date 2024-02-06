@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecycleviewSQLLITE" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.RecycleviewSQLLITE" parent="Base.Theme.RecycleviewSQLLITE" />
+
+    <style name="roundimage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <!--        <item name="color">@color/white</item>-->
+    </style>
+
+    <style name="roundimage4" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+                <item name="color">@color/white</item>
+    </style>
+</resources>

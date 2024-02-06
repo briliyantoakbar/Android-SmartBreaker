@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="50dp"
+    android:layout_height="match_parent"
+    tools:context=".Tambah">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content"
+            android:text="Nama Device"/>
+        <EditText
+            android:id="@+id/EditTxtNamaDevice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/edit_search"
+            android:backgroundTint="#F7F7F7"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Write Your Device"
+            android:paddingLeft="12dp"
+            android:textSize="12dp" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:text="Ruangan"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/spinnerRuang"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_search"
+            android:backgroundTint="#F7F7F7"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Write Your Device"
+            android:paddingLeft="12dp"
+            android:textSize="12dp"/>
+        <TextView
+
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:text="Relay"/>
+
+        <Spinner
+            android:id="@+id/spinnerRelay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_search"
+            android:backgroundTint="#F7F7F7"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Write Your Device"
+            android:paddingLeft="12dp"
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:text="Jenis Produk"/>
+
+        <Spinner
+            android:id="@+id/spinnerJenisProduk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_search"
+            android:backgroundTint="#F7F7F7"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Write Your Device"
+            android:paddingLeft="12dp"
+            android:textSize="12dp" />
+
+        <TextView
+
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:text="Item Device"/>
+
+        <Spinner
+            android:id="@+id/spinnerDevice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_search"
+            android:backgroundTint="#F7F7F7"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Write Your Device"
+            android:paddingLeft="12dp"
+            android:textSize="12dp" />
+    </LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:text="Save"
+    android:id="@+id/btnsave"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_height="wrap_content"/>
+
+</RelativeLayout>

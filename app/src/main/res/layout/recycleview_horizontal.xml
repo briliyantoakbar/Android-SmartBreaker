@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            app:shapeAppearanceOverlay="@style/roundimage"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/shadowimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/roundimage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/NAMAITEM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="160dp"
+            android:text="Los miserables"/>
+        <TextView
+            android:id="@+id/TIPEPRODUK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="140dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="160dp"
+            android:text="Televison"/>
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/txtNAMARUANG"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Los miserables"/>
+        <TextView
+            android:layout_marginLeft="280dp"
+            android:id="@+id/txtRELAY"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="ID-1"/>
+        <TextView
+            android:layout_marginLeft="280dp"
+            android:id="@+id/txtNAMADEVICE"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="ESP32"/>
+        <ImageView
+            android:id="@+id/txtKONDISI"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/baseline_circle_24" />
+
+        <ImageView
+            android:id="@+id/titik"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="320dp"
+            android:clickable="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_more_horiz_24"
+            app:tint="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
