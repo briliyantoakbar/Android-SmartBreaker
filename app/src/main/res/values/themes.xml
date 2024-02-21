@@ -18,4 +18,13 @@
         <item name="cornerSize">50%</item>
                 <item name="color">@color/white</item>
     </style>
+    <style name="CustomCardViewStyle.TopLeftCorner">
+        <item name="cornerSizeTopLeft">16dp</item>
+        <!-- Set other corners if needed, otherwise, they default to 0 -->
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="CustomCardViewStyle">Style</style>
 </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityMaps">
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:apiKey="AIzaSyBduM-P6VKUNI7YAJc0coWl0f-ik0RviTs"/>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="-20dp"
+        android:background="@drawable/round"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        >
+        <Button
+            android:id="@+id/koordinat"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Koordinat"
+            tools:ignore="NotSibling" />
+        <Button
+            android:id="@+id/posisi_user"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Posisi User" />
+
+    </LinearLayout>
+</RelativeLayout>

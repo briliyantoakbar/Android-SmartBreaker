@@ -48,6 +48,7 @@ class AdapterActivityDevice(
             Toast.makeText(context, uuid, Toast.LENGTH_SHORT).show()
             extra.putSerializable("objects", arrayversit);
             extra.putSerializable("uuid", uuid);
+            extra.putSerializable("nama", nama);
             val intent2 = Intent(context, UpdateVersion::class.java)
             intent2.putExtra("extra", extra);
             context.startActivity(intent2)

@@ -10,7 +10,7 @@ import android.util.Log
 class HelpertimerOFF(context: Context): SQLiteOpenHelper(context,"timerV2", null,1) {
     override fun onCreate(db: SQLiteDatabase?) {
         val createTableQuery =
-            "CREATE TABLE IF NOT EXISTS waktuV2 (id INTEGER PRIMARY KEY autoincrement, uuid TEXT, kondisi TEXT)"
+            "CREATE TABLE IF NOT EXISTS waktuV2 (id INTEGER PRIMARY KEY autoincrement, uuid TEXT, kondisi TEXT,jam Int,menit Int)"
         if (db != null) {
             db.execSQL(createTableQuery)
         }
@@ -80,5 +80,50 @@ class HelpertimerOFF(context: Context): SQLiteOpenHelper(context,"timerV2", null
         values.put("kondisi", kondisi)
         database.update("waktuV2", values, "id=?", arrayOf(id.toString()))
         database.close()
+    }
+    fun UpdateDataJam(uuid:String, jam:Int, menit:Int){
+        val database = this.writableDatabase
+        val values = ContentValues()
+        values.put("jam", jam)
+        values.put("menit", menit)
+        database.update("waktuV2", values, "uuid=?", arrayOf(uuid.toString()))
+        database.close()
+    }
+
+    fun selectjam(Uuid: String,Jam:Int, Menit:Int) {
+        var c=false
+        val db = readableDatabase
+        var id:String=""
+        val cursor: Cursor = db.rawQuery("SELECT * FROM waktuV2 WHERE uuid=?", arrayOf(Uuid))
+        if (cursor.moveToNext()) {
+            do {
+                c=true
+                id=cursor.getString(0)
+                Log.d("ID SWITCH",id)
+
+            } while (cursor.moveToNext())
+        }
+        if(c.equals(true)){
+            UpdateDataJam(Uuid,Jam,Menit)
+        }
+
+
+    }
+    fun getjam(Uuid: String):ArrayList<Int>{
+        var c=false
+        val db = readableDatabase
+        var jam:Int=0
+        var menit:Int=0
+        val data=ArrayList<Int>()
+        val cursor: Cursor = db.rawQuery("SELECT * FROM waktuV2 WHERE uuid=?", arrayOf(Uuid))
+        if (cursor.moveToNext()) {
+            do {
+                jam=cursor.getInt(3).toInt()
+                menit=cursor.getInt(4).toInt()
+            } while (cursor.moveToNext())
+            data.add(jam)
+            data.add(menit)
+        }
+        return data
     }
 }

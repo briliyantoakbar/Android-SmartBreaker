@@ -143,17 +143,197 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Schedule Location"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/addtimeron"
+                    android:clickable="true"
+                    android:background="@drawable/gradient"
+                    android:src="@drawable/baseline_add_24"/>
+            </LinearLayout>
             <androidx.cardview.widget.CardView
-                android:id="@+id/TimerON"
+                android:id="@+id/MapsON"
+                app:cardCornerRadius="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="38dp"
+
                 android:layout_marginRight="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/baseline_home_24"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/baseline_homered_24"
+                            android:layout_marginBottom="12dp"
+                            android:layout_alignParentBottom="true"
+
+                           />
+                    </RelativeLayout>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Dalam Rumah"
+                            android:textSize="14dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="8dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textSize="14dp"
+                                android:text="Luar Rumah" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <Spinner
+                            android:id="@+id/dalamrumah"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edit_search"
+                            android:backgroundTint="#F7F7F7"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:id="@+id/luarrumah"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/edit_search"
+                                android:backgroundTint="#F7F7F7"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginRight="8dp"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <Switch
+                            android:id="@+id/switchMaps"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:drawableLeft="@drawable/baseline_local_taxi_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distance"/>
+                        <TextView
+                            android:id="@+id/txtjarak"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="13dp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:text="0 m"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Schedule Alarm"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+
+                    android:background="@drawable/gradient"
+                    android:src="@drawable/baseline_access_alarmwhite_24"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/TimerON"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:id="@+id/bgon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <TextView
@@ -200,8 +380,10 @@
                 android:layout_marginBottom="40dp">
 
                 <LinearLayout
+                    android:id="@+id/bgoff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <TextView
@@ -225,7 +407,7 @@
                             android:layout_marginLeft="12dp"
                             android:layout_weight="8"
                             android:drawableLeft="@drawable/baseline_alarm_24"
-                            android:text="12.00PM"
+                            android:text="00:00PM"
                             android:textSize="30dp" />
 
                         <Switch
@@ -237,6 +419,8 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

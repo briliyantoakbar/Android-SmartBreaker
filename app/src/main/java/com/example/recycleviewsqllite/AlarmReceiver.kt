@@ -47,15 +47,14 @@ class AlarmReceiver : BroadcastReceiver() {
             kondisi.toString()
 
         )
-        myadapter.notifyDataSetChanged()
-        adapter_recycle.notifyDataSetChanged()
+
         if(switch.equals("a")){
             val helperTimer=HelperTimer(context)
-            helperTimer.insertData(uuidItem.toString(),"0")
+            helperTimer.select(uuidItem.toString(),"0")
         }
         if(switch.equals("b")){
             val helperTimerOFF=HelpertimerOFF(context)
-            helperTimerOFF.insertData(uuidItem.toString(),"0")
+            helperTimerOFF.select(uuidItem.toString(),"0")
         }
         post.HTTPPost(context, list)
         Toast.makeText(context, "Alarm $alarmId Ringing!", Toast.LENGTH_SHORT).show()

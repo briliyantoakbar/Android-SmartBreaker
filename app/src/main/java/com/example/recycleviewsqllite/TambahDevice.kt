@@ -23,8 +23,6 @@ class TambahDevice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tambah_device)
-        edtTxtEmail=findViewById(R.id.EditTxtEmail)
-        edtTxtPassword=findViewById(R.id.EditTxtPassword)
         edtTxtPasswordSSID=findViewById(R.id.EditTxtPasswordSSID)
         edtTxtSSID=findViewById(R.id.EditTxtSSID)
         edtTxtIP=findViewById(R.id.EditTxtIP)
@@ -36,8 +34,7 @@ class TambahDevice : AppCompatActivity() {
         val myUuidAsString = myUuid.toString()
         btnsimpan.setOnClickListener {
             Log.d("UUID DEVICE:",myUuidAsString)
-            helperLogin.insertDatag(
-                edtTxtEmail.getText().toString(), edtTxtPassword.getText().toString(),
+            helperLogin.insertDatag("OKE", "PAO",
                 edtTxtNamaDevice.getText().toString(), myUuidAsString)
 
             clientSocket = DatagramSocket()

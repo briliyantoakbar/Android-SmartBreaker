@@ -95,7 +95,9 @@ class Tambah : AppCompatActivity() {
                 helper.getAllTipeRuang()
                 if (myUuidAsString != null) {
                     val dat=HelperTimer(this)
+                    val dat2=HelpertimerOFF(this)
                     dat.select(myUuidAsString,"0")
+                    dat2.select(myUuidAsString,"0")
                 }
 //            helper.insertData("464646","TAMAN","HIGH")
 //            list.clear()
