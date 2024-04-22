@@ -156,7 +156,7 @@ class Helper(context: Context) : SQLiteOpenHelper(context,"SmartBreakerV1", null
 
     fun DeleteData(id:Int){
         val db = this.writableDatabase
-       val COLUMN_ID = "id"
+        val COLUMN_ID = "id"
         val QUERY = "DELETE FROM BreakerV1 WHERE id = ?"
         db.execSQL(QUERY, arrayOf(id.toString()))
         db.close()

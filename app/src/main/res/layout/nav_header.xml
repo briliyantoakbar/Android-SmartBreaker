@@ -15,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/akbar" />
 
 
     <LinearLayout

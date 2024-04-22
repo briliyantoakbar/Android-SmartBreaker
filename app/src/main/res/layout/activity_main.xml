@@ -53,7 +53,7 @@
                 android:layout_height="35dp"
                 android:layout_marginRight="22dp"
                 android:layout_gravity="right"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/akbar"
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
     </LinearLayout>
